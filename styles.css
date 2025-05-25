@@ -1,0 +1,126 @@
+/* default styles */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Purple-500: hsl(259, 100%, 65%);
+    --Red-400: hsl(0, 100%, 67%);
+    --White: hsl(0, 100%, 100%);
+    --Grey-100: hsl(0, 0%, 94%);
+    --Grey-200: hsl(0, 0%, 86%);
+    --Grey-500: hsl(0, 1%, 44%);
+    --Black: hsl(0, 0%, 0%);
+}
+
+body {
+    background-color: var(--Grey-100);
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+
+}
+
+/* calender */
+.calender {
+    background-color: var(--White);
+    padding: 40px;
+    border-radius: 10px 10px 150px 10px;
+    max-width: 600px;
+    box-shadow: 3px 3px 9px var(--Grey-200);
+}
+
+.user {
+    max-width: 85%;
+}
+
+input {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--Black);
+    border: 1px solid var(--Grey-200);
+    width: 100%;
+}
+
+label {
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--Grey-500);
+}
+
+button {
+    border: none;
+    outline: none;
+    overflow: hidden;
+    float: right;
+}
+
+/* Utilize classes */
+.middle-line {
+    border-bottom: 1px solid var(--Grey-200);
+    position: relative;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.icon-arrow {
+    background-color: var(--Purple-500);
+    border-radius: 50%;
+    padding: 10px;
+    width: 60px;
+    right: 0;
+    top: -30px;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.sm-font {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.lg-font {
+    font-size: 55px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.number {
+    color: var(--Purple-500);
+}
+
+.error {
+    color: var(--Red-400);
+    display: none;
+}
+
+/* Js */
+label.active {
+    color: var(--Red-400);
+}
+
+.error.active {
+    display: block;
+}
